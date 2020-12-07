@@ -37,9 +37,12 @@ jobs:
           cmd: 
             install #cmd npm install/ yarn install
       
+      - name: build react
+        uses: yarn build
+      
       - name: installing surge 
         uses: npm install -g surge
       
       - name: deploying on surge
-        uses: surge ./build  http://mubashir-akhtar-a1.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
+        uses: surge ./build  mubashir-akhtar-a1.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
       
