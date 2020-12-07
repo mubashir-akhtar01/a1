@@ -41,5 +41,5 @@ jobs:
         uses: npm install -g surge
       
       - name: deploying on surge
-        uses: surge ./ http://mubashir-akhtar-a1.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
+        uses: surge ./build  http://mubashir-akhtar-a1.surge.sh/ --token ${{secrets.SURGE_TOKEN}} 
       
